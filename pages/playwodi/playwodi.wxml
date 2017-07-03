@@ -1,0 +1,39 @@
+  <view class="weui-cells__title">玩家(不包括法官)</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">玩家人数</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindblur="btn_setPlayerCount" value="{{benjuInfo.playerCount}}" placeholder="最少4人最多16人"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">启用白板</view>
+                <view class="weui-cell__ft">
+                    <switch checked="{{benjuInfo.enable_baiban?true:false}}"  bindchange="change_isBaiban" />
+                </view>
+            </view>
+        </view>
+       <view class="weui-cells__title">身份词</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">平民词语</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{benjuInfo.pingmin_word}}" placeholder="请输入平民词语"/>
+                </view>
+            </view>
+             <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">卧底词语</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{benjuInfo.wodi_word}}"  placeholder="请输入卧底词语"/>
+                </view>
+            </view>
+        </view>
+
+        <button type="primary" size="default" bindtap="startGame"> 开始发词 </button>
+ 

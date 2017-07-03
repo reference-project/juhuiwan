@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cell/cell",
+    "pages/playwodi/playwodi",
+    "pages/wordinfo/wordinfo",
+    "pages/dipai/dipai",
+    "pages/waitpage/waitpage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "谁是卧底",
+    "navigationBarTextStyle": "black"
+  }
+}

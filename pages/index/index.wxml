@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <!--<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>-->
+
+  <!--index.wxml-->
+ <!--<import src="../cell/cell.wxml" /> 
+<view class="pages-container"> 
+ <scroll-view scroll-y="true" class="pages-wrapper"> 
+  <view wx:for="{{pageItems}}" wx:key="{{text}}"> 
+   <view class="pages-row"> 
+    <template is="cell" data="{{...item[0],cellHeight}}" /> 
+    <template is="cell" data="{{...item[1],cellHeight}}" /> 
+    <template is="cell" data="{{...item[2],cellHeight}}" /> 
+   </view> 
+  </view> 
+ </scroll-view> 
+</view> 
+ -->
+   
+
+ <view class="log">
+  <image style="width: 200px; height: 200px; background-color: #eeeeee;"  src="../../images/log.jpg"></image>
+ </view>
+<button type="primary" size="default" bindtap="startGame"> 开始游戏 </button>
+
+ 
+<!--<view class="page">
+  <view class="page__hd">
+    <text class="page__title">image</text>
+    <text class="page__desc">图片</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+      </view>
+    </view>
+  </view>
+</view>-->
+
+</view>
+

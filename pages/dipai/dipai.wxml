@@ -1,0 +1,14 @@
+ 
+<wx-view class="page">
+    <wx-view class="page__hd">
+      <wx-view class="page__title" >
+          <text style="fond-size:24px;text-align:center"  >{{word}}</text>
+      </wx-view>
+    </wx-view>
+     <wx-view class="page__hd">
+
+    
+    <button class="weui-btn"  type="primary"size="default" bindtap="yes_i_get"> 好的,我知道 </button>
+           
+     </wx-view>
+</wx-view>
