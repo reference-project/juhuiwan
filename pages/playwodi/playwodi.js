@@ -142,7 +142,7 @@ Page({
     
     app.globalData.benjuInfo = this.data.benjuInfo;
     wx.navigateTo({
-      url: '../wordinfo/wordinfo'
+      url: '../gamemain/gamemain'
     })
   }
 })

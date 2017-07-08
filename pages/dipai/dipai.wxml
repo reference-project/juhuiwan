@@ -1,14 +1,15 @@
  
-<wx-view class="page">
-    <wx-view class="page__hd">
-      <wx-view class="page__title" >
-          <text style="fond-size:24px;text-align:center"  >{{word}}</text>
-      </wx-view>
-    </wx-view>
-     <wx-view class="page__hd">
+<view class="container"  scroll-y="true"  >
+    <view >
+      <view style="background:url(../../images/fanpaiduihuakuang.png) no-repeat;  background-size:100% 100%;text-align:center;height: 300px;" >
+       
+          <text style="fond-size:24px;position:relative;bottom:-200px;"  >{{word}}</text>
+      </view>
+    </view>
+     <view  >
 
     
     <button class="weui-btn"  type="primary"size="default" bindtap="yes_i_get"> 好的,我知道 </button>
            
-     </wx-view>
-</wx-view>
+     </view>
+</view>

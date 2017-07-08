@@ -6,11 +6,12 @@
     "pages/playwodi/playwodi",
     "pages/wordinfo/wordinfo",
     "pages/dipai/dipai",
-    "pages/waitpage/waitpage"
+    "pages/waitpage/waitpage",
+    "pages/gamemain/gamemain"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#105788",
     "navigationBarTitleText": "谁是卧底",
     "navigationBarTextStyle": "black"
   }

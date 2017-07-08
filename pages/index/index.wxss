@@ -1,3 +1,6 @@
  .log{
    text-align: center;
  }
+ page{
+   background-image:linear-gradient(to bottom,#105788,#41f0fe);
+}
