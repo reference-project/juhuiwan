@@ -1,6 +1,8 @@
 /* gamemain.wxss */
 
-.yichakan{
-  padding:10px 10px;
 
+ page{
+   background-image:linear-gradient(to bottom,#2883e4,#68dffa);
+   background-repeat:no-repeat; 
+   background-attachment:fixed;
 }

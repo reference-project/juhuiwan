@@ -1,18 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/cell/cell",
     "pages/playwodi/playwodi",
-    "pages/wordinfo/wordinfo",
     "pages/dipai/dipai",
-    "pages/waitpage/waitpage",
     "pages/gamemain/gamemain"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#105788",
+    "navigationBarBackgroundColor": "#2883e4",
     "navigationBarTitleText": "谁是卧底",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

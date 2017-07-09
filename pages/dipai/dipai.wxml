@@ -1,15 +1,18 @@
  
 <view class="container"  scroll-y="true"  >
-    <view >
-      <view style="background:url(../../images/fanpaiduihuakuang.png) no-repeat;  background-size:100% 100%;text-align:center;height: 300px;" >
+    <view class="dipai_header" >
+     <image style="width:500rpx; height:303rpx; "  src="../../images/fanpaiduihuakuang.png"></image>
+
+      <view class="dipai_word" >
        
-          <text style="fond-size:24px;position:relative;bottom:-200px;"  >{{word}}</text>
+          <text  >{{word}}</text>
       </view>
     </view>
      <view  >
 
-    
-    <button class="weui-btn"  type="primary"size="default" bindtap="yes_i_get"> 好的,我知道 </button>
-           
+      <button class="my-button" style="margin-top:50px;" type="primary" size="default" bindtap="yes_i_get"> 好的,我知道了</button>
+ 
      </view>
+
+       <image style="width:100%; height:303rpx; "  src="../../images/beijingrenwu.png"></image>
 </view>

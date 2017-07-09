@@ -1,1 +1,4 @@
 /* dipai.wxss */
+ page{
+   background-image:linear-gradient(to bottom,#2883e4,#68dffa);
+}

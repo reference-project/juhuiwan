@@ -3,14 +3,18 @@
   
   <view style="margin-top:100px;" class="weui-cells__title">玩家(不包括法官)</view>
         <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
+           <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">玩家人数</view>
+                    <view class="weui-label">当前选择</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" bindblur="btn_setPlayerCount" value="{{benjuInfo.playerCount}}" placeholder="最少4人最多16人"/>
+                    <picker   value="{{index}}" range="{{playerNumArray}}" bindchange="btn_setPlayerCount">
+                        <view class="weui-input">{{playerNumArray[index]}}</view>
+                    </picker>
                 </view>
             </view>
+            
+          
             <view class="weui-cell weui-cell_switch">
                 <view class="weui-cell__bd">启用白板</view>
                 <view class="weui-cell__ft">
@@ -18,6 +22,7 @@
                 </view>
             </view>
         </view>
+        <view class="weui-cells__title">{{benjuInfo.enable_baiban?benjuInfo.playerCount-benjuInfo.wodi_count-benjuInfo.wodi_count:benjuInfo.playerCount-benjuInfo.wodi_count}}个平民{{benjuInfo.wodi_count}}个卧底{{benjuInfo.baiban_count}}个白板</view>
        <view class="weui-cells__title">身份词</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
@@ -25,7 +30,7 @@
                     <view class="weui-label">平民词语</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" value="{{benjuInfo.pingmin_word}}" placeholder="请输入平民词语"/>
+                    <input class="weui-input" value="{{pingmin_word}}" placeholder="不填写默认词语" bindblur="setPingMinWord"  />
                 </view>
             </view>
              <view class="weui-cell weui-cell_input">
@@ -33,11 +38,11 @@
                     <view class="weui-label">卧底词语</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" value="{{benjuInfo.wodi_word}}"  placeholder="请输入卧底词语"/>
+                    <input class="weui-input" value="{{wodi_word}}"  placeholder="不填写默认词语" bindblur="setWoDiWord" />
                 </view>
             </view>
         </view>
 
-        <button style="margin-top:50px;" type="primary" size="default" bindtap="startGame"> 开始发词 </button>
+        <button class="my-button2" style="margin-top:50px;" type="primary" size="default" bindtap="startGame"> 开始发词 </button>
 
  </view>

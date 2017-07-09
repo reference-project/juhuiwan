@@ -16,17 +16,21 @@ Page({
    */
   onLoad: function (options) {
 
-    var current_player = app.globalData.benjuInfo.current_player;
+   
+    this.player_num = options.player_num;
+   //player_index
+    var current_player = parseInt(options.player_num)-1;
+   
     var wodi_array = app.globalData.benjuInfo.wodi_array;
     var baiban_array = app.globalData.benjuInfo.baiban_array;
     var pingmin_word = app.globalData.benjuInfo.pingmin_word;
     var wodi_word = app.globalData.benjuInfo.wodi_word;
     //判断是平民还是 卧底还是白板
-    if (wodi_array.indexOf(current_player-1)!=-1){
+    if (wodi_array.indexOf(current_player)!=-1){
       this.setData({
         word: wodi_word
       }) ;
-    } else if (baiban_array.indexOf(current_player - 1) != -1) {
+    } else if (baiban_array.indexOf(current_player) != -1) {
       this.setData({
         word: ""
       });
@@ -88,16 +92,9 @@ Page({
   },
   yes_i_get:function(){
     console.log("好的我知道了");
-    if (app.globalData.benjuInfo.current_player == app.globalData.benjuInfo.playerCount){
-
-      app.globalData.benjuInfo.current_player++;
-      wx.navigateTo({
-        url: '../waitpage/waitpage'
-      })
-    }else{
-      app.globalData.benjuInfo.current_player++;
-      wx.navigateBack();
-    }
+    wx.redirectTo({
+      url: '../gamemain/gamemain?player_num=' + this.player_num
+    });
    
   }
 })

@@ -10,7 +10,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    benjuInfo: app.globalData.benjuInfo
+    benjuInfo: app.globalData.benjuInfo,
+    index:2,
+    playerNumArray:[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+    pingmin_word:"",
+    wodi_word:""
   },
 
   /**
@@ -21,7 +25,6 @@ Page({
     this.setData({
       benjuInfo: app.globalData.benjuInfo
     })
-    console.log("this.data.benjuInfo")
     console.log(this.data.benjuInfo)
   },
 
@@ -77,13 +80,30 @@ Page({
   
   },
   btn_setPlayerCount:function(e){
+
+// 1 8 2  12 3 16 4
+    var playerNum = this.data.playerNumArray[parseInt(e.detail.value)];
+
+    var wodi_count=1;
+    if (playerNum < 8){
+      wodi_count=1;
+    } else if (playerNum >= 8 && playerNum<12){
+      wodi_count=2;
+    } else if (playerNum >= 12 && playerNum<16){
+      wodi_count=3;
+    }else{
+      wodi_count=4;
+    }
     var options = underscore.extend(
       this.data.benjuInfo,
       { 
-        playerCount: e.detail.value
+        playerCount: playerNum,
+        wodi_count: this.data.benjuInfo.enable_baiban ? wodi_count - 1 : wodi_count,
+        baiban_count: this.data.benjuInfo.enable_baiban?1:0
       }
     )
     this.setData({
+      index: parseInt(e.detail.value),
       benjuInfo: options
     });
     console.log('input 发生 blur 事件，携带值为', e.detail.value)
@@ -92,52 +112,49 @@ Page({
     var options = underscore.extend(
       this.data.benjuInfo,
       {
-        enable_baiban: e.detail.value
+        enable_baiban: e.detail.value,
+        baiban_count: e.detail.value?1:0,
+        wodi_count: e.detail.value ? this.data.benjuInfo.wodi_count - 1 : this.data.benjuInfo.wodi_count+ 1
       }
     )
+    console.log(options);
     this.setData({
       benjuInfo: options
     });
   
     console.log('switch1 发生 change 事件，携带值为', e.detail.value)
   },
+  setPingMinWord:function(e){
+    
+    this.setData({
+      pingmin_word: e.detail.value
+    });
+
+    console.log('input 发生 blur 事件，携带值为', e.detail.value)
+  },
+  setWoDiWord:function(e){
+ 
+    this.setData({
+      wodi_word: e.detail.value
+    });
+  
+    console.log('input 发生 blur 事件，携带值为', e.detail.value)
+  },
   startGame:function () {
    
     console.log("开始发词");
     
-    console.log(this.data.benjuInfo)
     
-    var playerCount = parseInt(this.data.benjuInfo.playerCount);
-
-    //随机抽取卧底
-    var wodiArray=[];
-    for (var i = 0; i < parseInt(this.data.benjuInfo.wodi_count);i++){
-      var wodiIndex = parseInt(Math.random() * playerCount);
-      while (wodiArray.indexOf(wodiIndex)!=-1){
-        wodiIndex = parseInt( Math.random() * playerCount);
-      }
-      console.log("选择卧底："+wodiIndex)
-      wodiArray.push(wodiIndex);//选择一个卧底
+    if (this.data.pingmin_word&&this.data.wodi_word){
+      this.data.benjuInfo = app.getNewGameConfig(this.data.benjuInfo || app.globalData.benjuInfo||{}, false);
+      this.data.benjuInfo["pingmin_word"] = this.data.pingmin_word;
+      this.data.benjuInfo["wodi_word"] = this.data.wodi_word;
+      console.log("已填写身份词 不随机选择");
+    }else{
+      this.data.benjuInfo = app.getNewGameConfig(this.data.benjuInfo || app.globalData.benjuInfo||{}, true);
+      console.log("随机选择");
     }
-    this.data.benjuInfo["wodi_array"] = wodiArray;
-
-    //启用白板
-    if (this.data.benjuInfo.enable_baiban){
-      //随机抽取白板
-      var baibanArray = [];
-      for (var i = 0; i < parseInt(this.data.benjuInfo.baiban_count); i++) {
-        var baibanIndex = parseInt(Math.random() * playerCount);
-        while (wodiArray.indexOf(baibanIndex) != -1 || baibanArray.indexOf(baibanIndex) != -1) {
-          baibanIndex = parseInt(Math.random() * playerCount);
-        }
-        console.log("选择白板：" + baibanIndex)
-        baibanArray.push(baibanIndex);//选择一个卧底
-      }
-
-      this.data.benjuInfo["baiban_array"] = baibanArray;
-    }
-
-    
+    console.log(this.data.benjuInfo);
 
     
     app.globalData.benjuInfo = this.data.benjuInfo;

@@ -5,7 +5,7 @@ page{
     /*background-color: #F8F8F8;*/
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-   
+    background-color:rgb(248, 248, 248);
 }
 .page__hd {
     padding: 40px;
@@ -43,6 +43,67 @@ color:white !important;
 border:solid 1px #1079b8;
 margin-bottom:10px; 
 }
+.my-button2{
+  width:200px;
+background-color:transparent !important;
+color:#1079b8 !important;
+border:solid 1px #1079b8;
+margin-bottom:10px; 
+}
+.my-button3{
+  width:200px;
+background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+margin-bottom:10px;
+ 
+}
+.my-button4{
+  width:140px;
+background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+margin-bottom:10px;
+margin-left:10px;
+ 
+}
+.dipai_btn_container{
+   text-align: center
+}
+.my-footer_btn1{
+   width:300rpx;
+   float:left;
+   margin-left:60rpx;
+   background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+}
+.my-footer_btn2{
+  width:300rpx;
+   float:right;
+   margin-right:60rpx;
+   background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+}
+
+.my-footer_btn3{
+   width:250rpx;
+   float:left;
+   margin-left:60rpx;
+   background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+}
+.my-footer_btn4{
+  width:250rpx;
+   float:right;
+   margin-right:60rpx;
+   background-color:transparent !important;
+color:white !important;
+border:solid 1px #1079b8;
+}
+
 
 .my_title{
   color:white !important;
@@ -53,9 +114,25 @@ margin-bottom:10px;
 }
 
 .index_header{
+  margin-top:50px;
    text-align:center;
- 
-width:100%; 
+   width:100%; 
+   /*background:url("http://115.159.69.61/tiankonglann.png");*/
+}
+
+.dipai_header{
+   margin-top:50px;
+   text-align:center;
+   width:100%; 
+}
+.dipai_word{
+  text-align:center;
+  width:100%; 
+  height: 200rpx;
+  margin-top:80rpx;
+  color:white;
+  font-size:100rpx;
+
 }
 .index_buttons{
    text-align:center;
@@ -65,3 +142,211 @@ width:100%;
 bottom:10px;
 
 }
+.yichakan{
+   text-align:center;
+    padding:10px 10px;
+}
+
+
+.kapai{
+  position:relative;
+}
+.player_num{
+ position:absolute;
+ width:10rpx;
+ height:10rpx;
+ z-index:2;
+ right: 55rpx;
+ top: 10rpx;
+ font-size:25px;
+font-weight:bold;
+color:white;
+
+}
+
+.player_name{
+  position:absolute;
+  max-width:300rpx;
+ height:10rpx;
+ z-index:2;
+ left: 220rpx;
+ top: 60rpx;
+ font-size: 32px;
+ font-weight:bold;
+ font-family:YouYuan;
+ color:#105788;
+ /*text-shadow: 0.6px 0.6px 0px #105788;*/
+}
+
+.player_name_input{
+    position:absolute;
+  max-width:300rpx;
+ z-index:2;
+ height: 80rpx;
+ text-align: left;
+ left: 220rpx;
+ top: 40rpx;
+ font-size: 32px;
+ font-weight:bold;
+ font-family:YouYuan !important;
+ color:#105788;
+ /*text-shadow: 0.6px 0.6px 0px #105788;*/
+}
+
+.dipai{
+  left:250rpx !important;
+top:40rpx !important;
+font-size:18px !important;
+color:#919191 !important;
+/*text-shadow:none;*/
+
+}
+ .dipai_player_word{
+   position:absolute;
+  max-width:300rpx;
+ height:10rpx;
+ z-index:2;
+ left: 250rpx;
+ top: 80rpx;
+ font-size: 25px;
+ font-weight:bold;
+ font-family:YouYuan;
+ color:#fff;
+ }
+
+ 
+
+.playerNumPicker_index{
+padding-left:30px;
+
+
+}
+.player_name.out_status_player_name,.dipai_player_name.out_status_player_name{
+  color:#b5b5b6;
+   /*text-shadow: 0.6px 0.6px 0px #b5b5b6;*/
+}
+.out_status{
+   position:absolute;
+   width:154rpx;
+   height:113rpx; 
+   z-index:3;
+   left: 420rpx;
+   top: 60rpx;
+}
+.kapai_title{
+  color:white;
+  border-bottom:solid 1px white;
+  padding-left:15px;
+  font-weight:bold;
+}
+
+ 
+.wx-modal .wx-modal-mask {
+  z-index: inherit;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color .3s;
+  background-color: inherit;
+  z-index: 1000;
+  position: absolute;
+  background-color: #163e5e;
+  animation: fadeIn ease .3s forwards;
+}
+
+.wx-modal .wx-modal-dialog {
+  position: absolute;
+  z-index: 5000;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.wx-modal .wx-modal-dialog-hd {
+  padding: 1.2em 20px .5em;
+}
+
+.wx-modal .wx-modal-dialog-hd strong {
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.wx-modal .wx-modal-dialog-bd {
+  text-align: center;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #888;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.wx-modal .wx-modal-dialog-ft {
+  position: relative;
+  line-height: 42px;
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  padding-top:10px;
+}
+
+.wx-modal .wx-modal-dialog-ft:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.wx-modal .wx-modal-dialog-ft a {
+  position: relative;
+  display: block;
+  flex: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wx-modal .wx-modal-dialog-ft a[hidden] {
+  display: none;
+}
+
+.wx-modal .wx-modal-dialog-ft a:active {
+  background-color: #eee;
+}
+
+.wx-modal .wx-modal-btn-primary {
+  color: #3cc51f;
+}
+
+.wx-modal .wx-modal-btn-default {
+  color: #000;
+}
+
+.wx-modal .wx-modal-btn-default:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+
+.result_image{
+  width:450rpx;
+  height:450rpx;
+}
+
+ 
