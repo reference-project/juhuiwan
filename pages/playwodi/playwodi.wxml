@@ -1,7 +1,11 @@
   <view class="container"  scroll-y="true" >
   
+  <view class="shuoming">
+   <view class="shuoming_header" >谁是卧底</view>
+   <view class="shuoming_neirong" >设置好参与人数,点击开始发词,参与的人依次查看自己的身份词,之后每轮投票结束,点击淘汰的人出局判定输赢。</view>
+  </view>
   
-  <view style="margin-top:100px;" class="weui-cells__title">玩家(不包括法官)</view>
+  <view   class="weui-cells__title">玩家(不包括法官)</view>
         <view class="weui-cells weui-cells_after-title">
            <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">

@@ -1,0 +1,35 @@
+<view class="shuoming">
+<view class="shuoming_header">
+游戏流程
+</view>
+<view class="shuoming_neirong">
+以8或6人游戏为例
+</view>
+<view class="shuoming_neirong">
+1、在场8人中7人拿到同一词语，剩下1人拿到与之相关的另一词语。这时平民与卧底都不知道互相的身份，卧底也不知道自己是卧底。
+</view>
+<view class="shuoming_neirong">
+2、每人用一句话描述自己拿到的词语，最好不要太过明显，既不能让卧底察觉，也要给同伴以暗示。
+</view>
+<view class="shuoming_neirong">
+3、每轮描述完毕，所有在场的人投票选出怀疑的卧底人选，得票最多的人出局。若卧底出局，则游戏结束。若卧底未出局，游戏继续。如有两人得票相同，则进入PK，大家再从两人中间投出一个。
+</view>
+<view class="shuoming_neirong">
+4、若卧底撑到最后一轮（场上剩3人时），则卧底获胜，反之，则平民胜利。[4] 
+
+</view>
+<view class="shuoming_header">
+注意：
+</view>
+<view class="shuoming_neirong">
+卧底和平民都要描述自己手上的牌，卧底如果猜到了平民的词汇，接下来如果卧底的描述和平民词有共性那么OK；不可以为了掩饰自己的身份说出跟卧底词不搭边的话。例如：卧底词是福尔摩斯，平民词是工藤新一。如果卧底猜到了平民词，为了混淆视听而说“他长期使用着另一个名字”这样与福尔摩斯完全没有关系的描述，是不可以的。这就是考验卧底掩饰能力的地方。
+</view>
+
+
+<view class="shuoming_header">
+游戏经验
+</view>
+<view class="shuoming_neirong">
+当每个人拿到词语后，需要快速确认自己是否是卧底。如果是卧底，要猜到普通人的词，说出类似的词，从而混淆视听，保证生存能力。如果是普通人，既不能说的模棱两可也不能说的非常明确，也就是说让同伴认得出，让卧底猜不出。
+</view>
+</view>

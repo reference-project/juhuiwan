@@ -7,9 +7,9 @@
 </view>
 <view class="index_buttons">
 
- <view class="my_title" >请选择游戏模式</view>
-<button type="default" class="my-button"  size="default" bindtap="startGame"> 聚会游戏 </button>
-<button type="default" class="my-button" size="default" bindtap="startOnlineGame">在线游戏 </button>
+ <!--<view class="my_title" >请选择游戏模式</view>-->
+<button type="default" class="my-button"  size="default" bindtap="startGame"> 现在开始 </button>
+<button type="default" class="my-button" size="default" bindtap="startOnlineGame">玩法说明 </button>
 </view>
  
 

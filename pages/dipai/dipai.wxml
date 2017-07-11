@@ -10,9 +10,9 @@
     </view>
      <view  >
 
-      <button class="my-button" style="margin-top:50px;" type="primary" size="default" bindtap="yes_i_get"> 好的,我知道了</button>
- 
+      <button class="my-button" style="margin-top:30px;" type="primary" size="default" bindtap="yes_i_get"> 好的,我知道了</button>
+       <view class="dipai_tip" >小心别被人偷看噢！</view>
      </view>
 
-       <image style="width:100%; height:303rpx; "  src="../../images/beijingrenwu.png"></image>
+       <image class="dipai_bottom"   src="../../images/beijingrenwu.png"></image>
 </view>

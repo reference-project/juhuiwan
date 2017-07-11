@@ -81,18 +81,25 @@ Page({
   },
   btn_setPlayerCount:function(e){
 
+//<6 1个
+//>=6 <10 2个
+//>=10 <14 3个
+//>=14 <16 4个
+//>16 5
 // 1 8 2  12 3 16 4
     var playerNum = this.data.playerNumArray[parseInt(e.detail.value)];
 
     var wodi_count=1;
-    if (playerNum < 8){
+    if (playerNum < 6){
       wodi_count=1;
-    } else if (playerNum >= 8 && playerNum<12){
+    } else if (playerNum >= 6 && playerNum<10){
       wodi_count=2;
-    } else if (playerNum >= 12 && playerNum<16){
+    } else if (playerNum >= 10 && playerNum<14){
       wodi_count=3;
-    }else{
+    } else if (playerNum >= 14 && playerNum < 16){
       wodi_count=4;
+    }else{
+      wodi_count = 5;
     }
     var options = underscore.extend(
       this.data.benjuInfo,

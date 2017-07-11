@@ -30,9 +30,13 @@ Page({
     })
   },
   startOnlineGame:function(){
-    wx.showToast({
-      title: '敬请期待',
-      duration: 3000
-    });
+    // wx.showToast({
+    //   title: '敬请期待',
+    //   duration: 3000
+    // });
+
+    wx.navigateTo({
+      url: '../playwodi/shuoming',
+    })
   }
 })
