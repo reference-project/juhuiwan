@@ -1,6 +1,6 @@
 <view class="shuoming">
 <view class="shuoming_header">
-游戏流程
+“谁是卧底”流程
 </view>
 <view class="shuoming_neirong">
 以8或6人游戏为例
@@ -27,7 +27,7 @@
 
 
 <view class="shuoming_header">
-游戏经验
+经验
 </view>
 <view class="shuoming_neirong">
 当每个人拿到词语后，需要快速确认自己是否是卧底。如果是卧底，要猜到普通人的词，说出类似的词，从而混淆视听，保证生存能力。如果是普通人，既不能说的模棱两可也不能说的非常明确，也就是说让同伴认得出，让卧底猜不出。

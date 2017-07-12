@@ -369,13 +369,18 @@ padding-left:30px;
    padding-bottom: 20rpx;
  }
  .shuoming_header{
-   padding: 5px 50px;
+   padding: 5px 40px;
    font-weight: bold;
    font-size:large;
  }
 
  .shuoming_neirong{
-   padding: 5px 50px;
+   padding: 5px 40px;
     font-size:small;
     color:#919191;
  }
+
+.index_tip{
+  color: white;
+  text-align: center;
+}

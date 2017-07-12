@@ -94,7 +94,7 @@ App({
       playerCount: 6,
       pingmin_word: "",
       wodi_word: "",
-      wodi_count:1,
+      wodi_count:2,
       wodi_array:[],
       enable_baiban: false,
       baiban_count:0,
