@@ -1,4 +1,11 @@
 <view class="shuoming">
+
+<view class="shuoming_header">
+工具使用场景
+</view>
+<view class="shuoming_neirong">
+当线下面对面玩卧底游戏时，可以使用该工具发放身份词，判定游戏输赢。
+</view>
 <view class="shuoming_header">
 “谁是卧底”流程
 </view>
@@ -31,5 +38,9 @@
 </view>
 <view class="shuoming_neirong">
 当每个人拿到词语后，需要快速确认自己是否是卧底。如果是卧底，要猜到普通人的词，说出类似的词，从而混淆视听，保证生存能力。如果是普通人，既不能说的模棱两可也不能说的非常明确，也就是说让同伴认得出，让卧底猜不出。
+</view>
+
+<view class="shuoming_neirong">
+有问题请联系QA龙 991424736@qq.com
 </view>
 </view>
