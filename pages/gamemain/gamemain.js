@@ -15,8 +15,8 @@ Page({
     showResultDialog:false,
     yichakan_kapai_list:[],
     weichakan_kapai_list:[]
-  },
-
+ 
+  } ,
   /**
    * 生命周期函数--监听页面加载
    */

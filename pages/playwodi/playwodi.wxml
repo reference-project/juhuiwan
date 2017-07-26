@@ -1,52 +1,80 @@
-  <view class="container"  scroll-y="true" >
-  
+<view class="container" scroll-y="true">
+
   <view class="shuoming">
-   <view class="shuoming_header" >谁是卧底</view>
-   <view class="shuoming_neirong" >设置好参与人数,点击开始发词,参与的人依次查看自己的身份词,之后每轮投票结束,点击淘汰的人出局判定输赢。</view>
+    <view class="shuoming_header">谁是卧底</view>
+    <view class="shuoming_neirong">设置好参与人数,点击开始发词,参与的人依次查看自己的身份词,之后每轮投票结束,点击淘汰的人出局判定输赢。</view>
   </view>
-  
-  <view   class="weui-cells__title">玩家(不包括法官)</view>
-        <view class="weui-cells weui-cells_after-title">
-           <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">当前选择</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <picker   value="{{index}}" range="{{playerNumArray}}" bindchange="btn_setPlayerCount">
-                        <view class="weui-input">{{playerNumArray[index]}}</view>
-                    </picker>
-                </view>
-            </view>
-            
-          
-            <view class="weui-cell weui-cell_switch">
-                <view class="weui-cell__bd">启用白板</view>
-                <view class="weui-cell__ft">
-                    <switch checked="{{benjuInfo.enable_baiban?true:false}}"  bindchange="change_isBaiban" />
-                </view>
-            </view>
-        </view>
-        <view class="weui-cells__title">{{benjuInfo.enable_baiban?benjuInfo.playerCount-benjuInfo.wodi_count-benjuInfo.wodi_count:benjuInfo.playerCount-benjuInfo.wodi_count}}个平民{{benjuInfo.wodi_count}}个卧底{{benjuInfo.baiban_count}}个白板</view>
-       <view class="weui-cells__title">身份词</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">平民词语</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" value="{{pingmin_word}}" placeholder="不填写默认词语" bindblur="setPingMinWord"  />
-                </view>
-            </view>
-             <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">卧底词语</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" value="{{wodi_word}}"  placeholder="不填写默认词语" bindblur="setWoDiWord" />
-                </view>
-            </view>
-        </view>
 
-        <button class="my-button2" style="margin-top:50px;" type="primary" size="default" bindtap="startGame"> 开始发词 </button>
+  <view class="weui-cells__title">玩家(不包括法官)</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">当前选择</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker value="{{index}}" range="{{playerNumArray}}" bindchange="btn_setPlayerCount">
+          <view class="weui-input">{{playerNumArray[index]}}</view>
+        </picker>
+      </view>
+    </view>
 
- </view>
+
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">启用白板</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{benjuInfo.enable_baiban?true:false}}" bindchange="change_isBaiban" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">{{benjuInfo.enable_baiban?benjuInfo.playerCount-benjuInfo.wodi_count-benjuInfo.wodi_count:benjuInfo.playerCount-benjuInfo.wodi_count}}个平民{{benjuInfo.wodi_count}}个卧底{{benjuInfo.baiban_count}}个白板</view>
+  <view class="weui-cells__title">身份词 <button bindtap="selectClass" class="selectBtn">词语分类</button> </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">平民词语</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{pingmin_word}}" placeholder="不填写默认词语" bindblur="setPingMinWord" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">卧底词语</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{wodi_word}}" placeholder="不填写默认词语" bindblur="setWoDiWord" />
+      </view>
+    </view>
+  </view>
+
+  <button class="my-button2" style="margin-top:50px;" type="primary" size="default" bindtap="startGame"> 开始发词 </button>
+
+
+  <!--mask-->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+
+  <!--content-->
+  <!--使用animation属性指定需要执行的动画-->
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+    <!--drawer content-->
+    <view class="drawer_title">词语分类</view>
+    <view class="drawer_content">
+    <view class="class_list">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}">
+        {{item.value}}<checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+      </label>
+    </checkbox-group>
+
+           
+</view>
+
+    </view>
+    <view>
+
+ <button   class=" " size="default" bindtap="btn_selectClass"> 确定</button>
+    </view>
+  </view>
+
+</view>

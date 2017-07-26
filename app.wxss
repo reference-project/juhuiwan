@@ -1,271 +1,273 @@
 @import 'style/weui.wxss';
 
-page{
-    /*background-image:url("./images/首页1.png");*/
-    /*background-color: #F8F8F8;*/
-    font-size: 16px;
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-    background-color:rgb(248, 248, 248);
-}
-.page__hd {
-    padding: 40px;
-}
-.page__bd {
-    padding-bottom: 40px;
-}
-.page__bd_spacing {
-    padding-left: 15px;
-    padding-right: 15px;
+page {
+  /*background-image:url("./images/首页1.png");*//*background-color: #F8F8F8;*/
+  font-size: 16px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  background-color: rgb(248, 248, 248);
 }
 
-.page__ft{
-    padding-bottom: 10px;
-    text-align: center;
+.page__hd {
+  padding: 40px;
+}
+
+.page__bd {
+  padding-bottom: 40px;
+}
+
+.page__bd_spacing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page__ft {
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .page__title {
-    text-align: left;
-    font-size: 20px;
-    font-weight: 400;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .page__desc {
-    margin-top: 5px;
-    color: #888888;
-    text-align: left;
-    font-size: 14px;
+  margin-top: 5px;
+  color: #888;
+  text-align: left;
+  font-size: 14px;
 }
 
-.my-button{
-  width:200px;
-background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
-margin-bottom:10px; 
-}
-.my-button2{
-  width:200px;
-background-color:transparent !important;
-color:#1079b8 !important;
-border:solid 1px #1079b8;
-margin-bottom:10px; 
-}
-.my-button3{
-  width:200px;
-background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
-margin-bottom:10px;
- 
-}
-.my-button4{
-  width:140px;
-background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
-margin-bottom:10px;
-margin-left:10px;
- 
-}
-.dipai_btn_container{
-   text-align: center
-}
-.my-footer_btn1{
-   width:300rpx;
-   float:left;
-   margin-left:60rpx;
-   background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
-}
-.my-footer_btn2{
-  width:300rpx;
-   float:right;
-   margin-right:60rpx;
-   background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
+.my-button {
+  width: 200px;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+  margin-bottom: 10px;
 }
 
-.my-footer_btn3{
-   width:250rpx;
-   float:left;
-   margin-left:60rpx;
-   background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
-}
-.my-footer_btn4{
-  width:250rpx;
-   float:right;
-   margin-right:60rpx;
-   background-color:transparent !important;
-color:white !important;
-border:solid 1px #1079b8;
+.my-button2 {
+  width: 200px;
+  background-color: transparent !important;
+  color: #1079b8 !important;
+  border: solid 1px #1079b8;
+  margin-bottom: 10px;
 }
 
-
-.my_title{
-  color:white !important;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom:10px;
-  
+.my-button3 {
+  width: 200px;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+  margin-bottom: 10px;
 }
 
-.index_header{
-  margin-top:50px;
-   text-align:center;
-   width:100%; 
-   /*background:url("http://115.159.69.61/tiankonglann.png");*/
+.my-button4 {
+  width: 140px;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
-.dipai_header{
-   margin-top:20px;
-   text-align:center;
-   width:100%; 
+.dipai_btn_container {
+  text-align: center;
 }
-.dipai_word{
-  text-align:center;
-  width:100%; 
+
+.my-footer_btn1 {
+  width: 300rpx;
+  float: left;
+  margin-left: 60rpx;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+}
+
+.my-footer_btn2 {
+  width: 300rpx;
+  float: right;
+  margin-right: 60rpx;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+}
+
+.my-footer_btn3 {
+  width: 250rpx;
+  float: left;
+  margin-left: 60rpx;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+}
+
+.my-footer_btn4 {
+  width: 250rpx;
+  float: right;
+  margin-right: 60rpx;
+  background-color: transparent !important;
+  color: white !important;
+  border: solid 1px #1079b8;
+}
+
+.my_title {
+  color: white !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.index_header {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  /*background:url("http://115.159.69.61/tiankonglann.png");*/
+}
+
+.dipai_header {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.dipai_word {
+  text-align: center;
+  width: 100%;
   height: 200rpx;
-  margin-top:10rpx;
-  color:white;
-  font-size:100rpx;
-
-}
- .dipai_tip{
- text-align: center;
-color:white;
-font-size:larger;
-
- }
- .dipai_bottom{
- position: absolute;
- bottom: 5px;
- width:750rpx; 
- height:303rpx;
-
- }
-.index_buttons{
-   text-align:center;
-margin-bottom:10px;
-position:absolute;
-width:100%;
-bottom:10px;
-
-}
-.yichakan{
-   text-align:center;
-    padding:10px 10px;
+  margin-top: 10rpx;
+  color: white;
+  font-size: 100rpx;
 }
 
-
-.kapai{
-  position:relative;
-}
-.player_num{
- position:absolute;
- width:10rpx;
- height:10rpx;
- z-index:2;
- right: 55rpx;
- top: 10rpx;
- font-size:25px;
-font-weight:bold;
-color:white;
-
+.dipai_tip {
+  text-align: center;
+  color: white;
+  font-size: larger;
 }
 
-.player_name{
-  position:absolute;
-  max-width:300rpx;
- height:10rpx;
- z-index:2;
- left: 220rpx;
- top: 60rpx;
- font-size: 32px;
- font-weight:bold;
- font-family:YouYuan;
- color:#105788;
- /*text-shadow: 0.6px 0.6px 0px #105788;*/
+.dipai_bottom {
+  position: absolute;
+  bottom: 5px;
+  width: 750rpx;
+  height: 303rpx;
 }
 
-.player_name_input{
-    position:absolute;
-  max-width:300rpx;
- z-index:2;
- height: 80rpx;
- text-align: left;
- left: 220rpx;
- top: 40rpx;
- font-size: 32px;
- font-weight:bold;
- font-family:YouYuan !important;
- color:#105788;
- /*text-shadow: 0.6px 0.6px 0px #105788;*/
+.index_buttons {
+  text-align: center;
+  margin-bottom: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
 }
 
-.dipai{
-  left:250rpx !important;
-top:40rpx !important;
-font-size:18px !important;
-color:#919191 !important;
-/*text-shadow:none;*/
-
-}
- .dipai_player_word{
-   position:absolute;
-  max-width:300rpx;
- height:10rpx;
- z-index:2;
- left: 250rpx;
- top: 80rpx;
- font-size: 25px;
- font-weight:bold;
- font-family:YouYuan;
- color:#fff;
- }
-
- 
-
-.playerNumPicker_index{
-padding-left:30px;
-
-
-}
-.player_name.out_status_player_name,.dipai_player_name.out_status_player_name{
-  color:#b5b5b6;
-   /*text-shadow: 0.6px 0.6px 0px #b5b5b6;*/
-}
-.out_status{
-   position:absolute;
-   width:154rpx;
-   height:113rpx; 
-   z-index:3;
-   left: 420rpx;
-   top: 60rpx;
-}
-.kapai_title{
-  color:white;
-  border-bottom:solid 1px white;
-  padding-left:15px;
-  font-weight:bold;
+.yichakan {
+  text-align: center;
+  padding: 10px 10px;
 }
 
- 
+.kapai {
+  position: relative;
+}
+
+.player_num {
+  position: absolute;
+  width: 10rpx;
+  height: 10rpx;
+  z-index: 2;
+  right: 55rpx;
+  top: 10rpx;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.player_name {
+  position: absolute;
+  max-width: 300rpx;
+  height: 10rpx;
+  z-index: 2;
+  left: 220rpx;
+  top: 60rpx;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: YouYuan;
+  color: #105788;
+  /*text-shadow: 0.6px 0.6px 0px #105788;*/
+}
+
+.player_name_input {
+  position: absolute;
+  max-width: 300rpx;
+  z-index: 2;
+  height: 80rpx;
+  text-align: left;
+  left: 220rpx;
+  top: 40rpx;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: YouYuan !important;
+  color: #105788;
+  /*text-shadow: 0.6px 0.6px 0px #105788;*/
+}
+
+.dipai {
+  left: 250rpx !important;
+  top: 40rpx !important;
+  font-size: 18px !important;
+  color: #919191 !important;
+  /*text-shadow:none;*/
+}
+
+.dipai_player_word {
+  position: absolute;
+  max-width: 300rpx;
+  height: 10rpx;
+  z-index: 2;
+  left: 250rpx;
+  top: 80rpx;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: YouYuan;
+  color: #fff;
+}
+
+.playerNumPicker_index {
+  padding-left: 30px;
+}
+
+.player_name.out_status_player_name, .dipai_player_name.out_status_player_name {
+  color: #b5b5b6;
+  /*text-shadow: 0.6px 0.6px 0px #b5b5b6;*/
+}
+
+.out_status {
+  position: absolute;
+  width: 154rpx;
+  height: 113rpx;
+  z-index: 3;
+  left: 420rpx;
+  top: 60rpx;
+}
+
+.kapai_title {
+  color: white;
+  border-bottom: solid 1px white;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
 .wx-modal .wx-modal-mask {
-  z-index: inherit;
   width: 100%;
   height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  transition: background-color .3s;
-  background-color: inherit;
+  transition: background-color 0.3s;
   z-index: 1000;
-  position: absolute;
+  overflow: hidden;
   background-color: #163e5e;
-  animation: fadeIn ease .3s forwards;
+  animation: fadeIn ease 0.3s forwards;
 }
 
 .wx-modal .wx-modal-dialog {
@@ -281,7 +283,7 @@ padding-left:30px;
 }
 
 .wx-modal .wx-modal-dialog-hd {
-  padding: 1.2em 20px .5em;
+  padding: 1.2em 20px 0.5em;
 }
 
 .wx-modal .wx-modal-dialog-hd strong {
@@ -304,7 +306,7 @@ padding-left:30px;
   margin-top: 20px;
   font-size: 17px;
   display: flex;
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 .wx-modal .wx-modal-dialog-ft:before {
@@ -357,30 +359,182 @@ padding-left:30px;
   transform: scaleX(0.5);
 }
 
-.result_image{
-  width:450rpx;
-  height:450rpx;
+.result_image {
+  width: 450rpx;
+  height: 450rpx;
+}
+
+.shuoming {
+  padding-top: 50rpx;
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+.shuoming_header {
+  padding: 5px 40px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.shuoming_neirong {
+  padding: 5px 40px;
+  font-size: small;
+  color: #919191;
+}
+
+.index_tip {
+  color: white;
+  text-align: center;
+}
+
+/*button*/
+
+.btn {
+  width: 80%;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 40rpx 10%;
+  background: #000;
+  color: #fff;
+}
+
+/*mask*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.drawer_screenzz_forResult {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #163e5e;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_boxz_forResult {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #163e5e;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_title {
+  padding: 15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+
+.drawer_content {
+  height: 110px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+  text-align: center;
+}
+
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+}
+
+.top {
+  padding-top: 8px;
+}
+
+.bottom {
+  padding-bottom: 8px;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+.col-0 {
+  -webkit-box-flex: 0;
+  box-flex: 0;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.selectBtn {
+  width: 60px;
+  height: 22px;
+  text-align: center;
+  font-size: 10px;
+  float: right;
+  padding: 0px 0px;
 }
 
  
- .shuoming{
-   padding-top: 50rpx;
-   width: 100%;
-   padding-bottom: 20rpx;
- }
- .shuoming_header{
-   padding: 5px 40px;
-   font-weight: bold;
-   font-size:large;
- }
+.drawer_content label {
+width:210rpx;
+text-align:right;
+line-height:50rpx;
+display:block;
+float:left;
+padding:0px 0px;
+font-size:small;
+margin-bottom:5rpx;
 
- .shuoming_neirong{
-   padding: 5px 40px;
-    font-size:small;
-    color:#919191;
- }
+}
 
-.index_tip{
-  color: white;
-  text-align: center;
+.class_list {
+  text-align: left;
+  width: 650rpx;
+  margin: 0rpx auto;
 }

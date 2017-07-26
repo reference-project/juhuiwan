@@ -1,4 +1,4 @@
- <scroll-view  class="container" scroll-y="{{scroll_y}}" style=""    >
+ <view  class="container" style=""    >
 
   <view   class="kapai_title">未查看（{{weichakan_kapai_list.length}}）</view>
 
@@ -34,6 +34,7 @@
   
  
  
+ 
 
  
        
@@ -42,11 +43,12 @@
  <button   class="my-footer_btn1" size="default" bindtap="restart"> 开新局</button>
  <button   class="my-footer_btn2" size="default" bindtap="jiekai"> 揭开底牌</button>
          
+  
 　</view>
  
 
 <view  class="wx-modal" wx:if="{{showResultDialog}}" >
-  <view class="wx-modal-mask" style="height:100%" ></view>
+  <view class="wx-modal-mask"   ></view>
   <view class="wx-modal-dialog">
     <view class="wx-modal-dialog-hd">
       <strong></strong>
@@ -64,4 +66,7 @@
     </view>
   </view>
 </view>
-</scroll-view>
+ 
+
+ 
+</view>

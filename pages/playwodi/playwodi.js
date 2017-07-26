@@ -14,10 +14,19 @@ Page({
     index:2,
     playerNumArray:[4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
     pingmin_word:"",
-    wodi_word:""
-  },
-
-  /**
+    wodi_word:"",
+    showModalStatus: false,
+    items: [
+      { name: 'rcyp', value: '日常用品', checked: 'true' },
+      { name: 'sw', value: '食物', checked: 'true' },
+      { name: 'rw', value: '人物', checked: 'true' },
+      { name: 'dzw', value: '动植物', checked: 'true'},
+      { name: 'cy', value: '成语', checked: 'true'},
+      { name: 'ysj', value: '影视剧', checked: 'true'},
+      { name: 'qt', value: '其他', checked: 'true'}
+    ],
+    selectClass:"rcyp,sw,rw,dzw,cy,ysj,qt"
+  },/**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
@@ -78,6 +87,79 @@ Page({
    */
   onShareAppMessage: function () {
   
+  }, 
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    var selectItems=this.data.items;
+    for(var i=0;i<selectItems.length;i++){
+      if(e.detail.value.indexOf(selectItems[i]["name"])!=-1){
+        selectItems[i]["checked"]=true;
+      }else{
+        selectItems[i]["checked"] = false;
+      }
+    }
+    this.setData({
+      items: selectItems,
+      selectClass:e.detail.value.join(",")
+    })
+  },
+  btn_selectClass:function(){
+    this.util("close");
+  },
+  setClass:function(){
+    this.util("close");
+  },
+  selectClass: function (e) {
+    // var currentStatu = e.currentTarget.dataset.statu;
+    this.util("open");
+  },
+  util: function (currentStatu) {
+    /* 动画部分 */
+    // 第1步：创建动画实例 
+    var animation = wx.createAnimation({
+      duration: 200, //动画时长 
+      timingFunction: "linear", //线性 
+      delay: 0 //0则不延迟 
+    });
+
+    // 第2步：这个动画实例赋给当前的动画实例 
+    this.animation = animation;
+
+    // 第3步：执行第一组动画 
+    animation.opacity(0).rotateX(-100).step();
+
+    // 第4步：导出动画对象赋给数据对象储存 
+    this.setData({
+      animationData: animation.export()
+    })
+
+    // 第5步：设置定时器到指定时候后，执行第二组动画 
+    setTimeout(function () {
+      // 执行第二组动画 
+      animation.opacity(1).rotateX(0).step();
+      // 给数据对象储存的第一组动画，更替为执行完第二组动画的动画对象 
+      this.setData({
+        animationData: animation
+      })
+
+      //关闭 
+      if (currentStatu == "close") {
+        this.setData(
+          {
+            showModalStatus: false
+          }
+        );
+      }
+    }.bind(this), 200)
+
+    // 显示 
+    if (currentStatu == "open") {
+      this.setData(
+        {
+          showModalStatus: true
+        }
+      );
+    }
   },
   btn_setPlayerCount:function(e){
 
@@ -151,7 +233,7 @@ Page({
    
     console.log("开始发词");
     
-    
+    this.data.benjuInfo["selectClass"] = this.data.selectClass;
     if (this.data.pingmin_word&&this.data.wodi_word){
       this.data.benjuInfo = app.getNewGameConfig(this.data.benjuInfo || app.globalData.benjuInfo||{}, false);
       this.data.benjuInfo["pingmin_word"] = this.data.pingmin_word;
@@ -162,6 +244,7 @@ Page({
       console.log("随机选择");
     }
     console.log(this.data.benjuInfo);
+    
 
     
     app.globalData.benjuInfo = this.data.benjuInfo;
